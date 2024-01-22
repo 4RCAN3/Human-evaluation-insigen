@@ -71,6 +71,7 @@ def submit():
         # human_eval[idx].append(int(request.form['rating'])) Commented - Aaryan
         # with open('data/human_eval.json', "w") as outfile: Commented - Aaryan
         worksheet.append_row([request.form['rating'], idx])
+        rated_data.append(idx)
         # json.dump(human_eval, outfile, indent=1) Commented - Aaryan
         return redirect('/')
     else:
